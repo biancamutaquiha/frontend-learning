@@ -13,3 +13,18 @@ console.log(document.querySelector('.one'));
 console.log(document.querySelector('#blog-title'));
 //Query Selector All
 console.log(document.querySelectorAll('[src]'));
+
+//Content Handling
+//Text Content
+const element = document.getElementById('blog-title');
+console.log(element.textContent)
+element.textContent += ' - Hello World'
+console.log(element.textContent)
+//Inner Text
+console.log(element.innerText)
+element.innerText = 'Hello World'
+console.log(element.innerText)
+//Inner HTML
+console.log(element.innerHTML)
+element.innerHTML += '<strong>!!!</strong>'
+console.log(element.innerHTML)
