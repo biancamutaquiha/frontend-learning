@@ -28,3 +28,12 @@ console.log(element.innerText)
 console.log(element.innerHTML)
 element.innerHTML += '<strong>!!!</strong>'
 console.log(element.innerHTML)
+
+//Attributes handling
+const header = document.querySelector('head')
+header.setAttribute('id', 'header')
+const headerId = document.getElementById('header')
+console.log(headerId.getAttribute('id'))
+header.setAttribute('class', 'my-header')
+const headerClass = document.querySelector('.my-header')
+console.log(headerClass.getAttribute('class'))
