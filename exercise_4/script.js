@@ -37,3 +37,9 @@ console.log(headerId.getAttribute('id'))
 header.setAttribute('class', 'my-header')
 const headerClass = document.querySelector('.my-header')
 console.log(headerClass.getAttribute('class'))
+
+//Parent Node and Parent Element
+const body = document.querySelector('body');
+console.log(body.parentNode)
+console.log(body.parentElement)
+
