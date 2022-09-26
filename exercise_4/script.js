@@ -43,3 +43,11 @@ const body = document.querySelector('body');
 console.log(body.parentNode)
 console.log(body.parentElement)
 
+//Siblings
+const title = document.querySelector('#blog-title')
+console.log(title.nextElementSibling)
+console.log(title.nextSibling)
+const pOne = document.querySelector('p.one')
+console.log(pOne.previousElementSibling)
+console.log(pOne.previousSibling)
+
