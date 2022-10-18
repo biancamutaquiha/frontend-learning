@@ -1,10 +1,12 @@
+import './styles.css'
+
 function Home() {
   return (
-    <>
-      <h1>Hello World!</h1>
+    <div className='container'>
+      <h1>Presence List</h1>
       <input type="text" placeholder="type here" />
       <button>Send</button>
-    </>
+    </div>
     
   )
 }
