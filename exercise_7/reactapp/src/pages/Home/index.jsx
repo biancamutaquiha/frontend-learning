@@ -8,9 +8,9 @@ function Home() {
       <input type="text" placeholder="type here" />
       <button>Send</button>
 
-      <Card />
-      <Card />
-      <Card />
+      <Card name="Bianca" time="12:30"/>
+      <Card name="Olivio" time="14:23"/>
+      <Card name="Jeppe" time="16:45"/>
     </div>
     
   )
