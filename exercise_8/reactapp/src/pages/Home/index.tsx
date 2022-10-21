@@ -1,11 +1,21 @@
 import React, {useState, useEffect} from 'react';
 import './styles.css';
-import { Card } from '../../components/Card';
+import { Card, CardProps } from '../../components/Card';
+
+type ProfileResponse = {
+  login: string;
+  avatar_url: string;
+}
+
+type User = {
+  name: string;
+  avatar: string
+}
 
 function Home() {
-  const [personName, setPersonName] = useState();
-  const [people, setPeople] = useState([]);
-  const [user, setUser] = useState({name: '', avatar: ''});
+  const [personName, setPersonName] = useState('');
+  const [people, setPeople] = useState<CardProps[]>([]);
+  const [user, setUser] = useState<User>({} as User);
   
   function handleAddStudant(){
     const newPerson = {
@@ -22,7 +32,7 @@ function Home() {
   
   useEffect(() =>{
     fetch('https://api.github.com/users/biancamutaquiha')
-    .then(response => response.json())
+    .then(response => response.json() as unknown as ProfileResponse)
     .then(data => {
       setUser({
         name: data.login,
